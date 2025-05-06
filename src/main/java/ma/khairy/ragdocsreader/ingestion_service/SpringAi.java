@@ -6,6 +6,7 @@ import org.springframework.ai.reader.pdf.ParagraphPdfDocumentReader;
 import org.springframework.ai.transformer.splitter.TextSplitter;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
 import org.springframework.ai.vectorstore.VectorStore;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.io.Resource;
@@ -20,7 +21,7 @@ public class SpringAi implements CommandLineRunner {
     @Value("classpath:/docs/pddf.pdf")
     private Resource marketPDF;
 
-    public SpringAi(VectorStore vectorStore) {
+    public SpringAi(@Qualifier("myVectorStore") VectorStore vectorStore) {
         this.vectorStore = vectorStore;
     }
 
