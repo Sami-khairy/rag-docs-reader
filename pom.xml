@@ -72,6 +72,11 @@
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-tika-document-reader</artifactId>
         </dependency>
+        <!--        spring ai pdf reader &ndash;&gt; the doc must have table of contents-->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-pdf-document-reader</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
